@@ -36,7 +36,6 @@ class ReadExcel():
         #获取当前标签页的所有列
         self.ncols = self.sheet_tag.ncols
         print(self.nrows, self.ncols)
-
     def get_data(self):
         #定义一个空列表，后续用于接收取出来的每行数据
         list_all = []
@@ -58,9 +57,7 @@ class ReadExcel():
             # list1 = row_value
             #将字典存到总列表中
             list_all.append(value)
-
         return list_all
-
 if __name__ == '__main__':
     read = ReadExcel()
     read.get_data()
