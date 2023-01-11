@@ -25,17 +25,17 @@ class ReadExcel():
         #确定文件的位置
         cur_path = os.path.dirname(os.path.dirname(__file__))
         excel_dir = cur_path + '/testData/data.xlsx'
-        print(excel_dir)
+        #print(excel_dir)
         #打开文件
         readbook = xlrd.open_workbook(excel_dir)
-        print(readbook)
+        #print(readbook)
         #确定文件的标签页
         self.sheet_tag = readbook.sheet_by_name('Sheet1')
         #获取当前标签页的所有行
         self.nrows = self.sheet_tag.nrows
         #获取当前标签页的所有列
         self.ncols = self.sheet_tag.ncols
-        print(self.nrows, self.ncols)
+        #print(self.nrows, self.ncols)
     def get_data(self):
         #定义一个空列表，后续用于接收取出来的每行数据
         list_all = []
@@ -57,6 +57,7 @@ class ReadExcel():
             # list1 = row_value
             #将字典存到总列表中
             list_all.append(value)
+        print(list_all)
         return list_all
 if __name__ == '__main__':
     read = ReadExcel()
