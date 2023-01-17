@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e774a78-1aa9-4423-a5c0-b3961a8cb191" name="Changes" comment="测试数据的读写">
-      <change afterPath="$PROJECT_DIR$/testCase/TestCase.py" afterDir="false" />
+    <list default="true" id="9e774a78-1aa9-4423-a5c0-b3961a8cb191" name="Changes" comment="编写测试用例">
+      <change afterPath="$PROJECT_DIR$/lianxi/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lianxi/ddt_trest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/readExcel.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/readExcel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCase/TestCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/TestCase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/data.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testData/data.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +41,16 @@
   &quot;keyToString&quot;: {
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mayonglin/PycharmProjects/interfaceText/testData&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for TestCase.TestCase.test_run">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testData" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in TestCase.py">
     <configuration name="TestCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="interfaceText" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -55,28 +65,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testCase/TestCase.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lianxi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="interfaceText" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/common/lianxi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -129,6 +117,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for TestCase.TestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="interfaceText" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testCase" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;TestCase.TestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for TestCase.TestCase.test_run" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="interfaceText" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for TestCase.TestCase.test_run" />
-        <item itemvalue="Python.readExcel" />
-        <item itemvalue="Python.TestCase" />
         <item itemvalue="Python tests.Python tests in TestCase.py" />
-        <item itemvalue="Python.lianxi" />
+        <item itemvalue="Python tests.Python tests for TestCase.TestCase.test_run" />
+        <item itemvalue="Python.TestCase" />
+        <item itemvalue="Python tests.Python tests for TestCase.TestCase" />
+        <item itemvalue="Python.readExcel" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +183,8 @@
       <workItem from="1671950167509" duration="8000" />
       <workItem from="1671950224885" duration="1318000" />
       <workItem from="1671956385401" duration="17342000" />
-      <workItem from="1673073820993" duration="4859000" />
+      <workItem from="1673073820993" duration="12852000" />
+      <workItem from="1673924674868" duration="3288000" />
     </task>
     <task id="LOCAL-00001" summary="测试数据的读写">
       <created>1672107833822</created>
@@ -189,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672107833822</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="编写测试用例">
+      <created>1673427242247</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673427242247</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,12 +219,30 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试数据的读写" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试数据的读写" />
+    <MESSAGE value="编写测试用例" />
+    <option name="LAST_COMMIT_MESSAGE" value="编写测试用例" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/testCase/TestCase.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/testCase/TestCase.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/interfaceText$lianxi.coverage" NAME="lianxi Coverage Results" MODIFIED="1672045486528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/interfaceText$TestCase.coverage" NAME="TestCase Coverage Results" MODIFIED="1673423064345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase" />
-    <SUITE FILE_PATH="coverage/interfaceText$readExcel.coverage" NAME="readExcel Coverage Results" MODIFIED="1673426807632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
-    <SUITE FILE_PATH="coverage/interfaceText$.coverage" NAME=" Coverage Results" MODIFIED="1673427046864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase" />
+    <SUITE FILE_PATH="coverage/interfaceText$TestCase.coverage" NAME="TestCase Coverage Results" MODIFIED="1673929804513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase" />
+    <SUITE FILE_PATH="coverage/interfaceText$ddt_trest.coverage" NAME="ddt_trest Coverage Results" MODIFIED="1673506721108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lianxi" />
+    <SUITE FILE_PATH="coverage/interfaceText$readExcel.coverage" NAME="readExcel Coverage Results" MODIFIED="1673607865477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/common" />
+    <SUITE FILE_PATH="coverage/interfaceText$.coverage" NAME=" Coverage Results" MODIFIED="1673930269291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testCase" />
   </component>
 </project>

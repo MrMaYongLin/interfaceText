@@ -21,44 +21,37 @@
 import unittest
 import requests
 from common.readExcel import ReadExcel
+from ddt import ddt, data, unpack
+# 1、获取测试数据。调用readExcel内部的getdata方法
+read = ReadExcel()
+read_data = read.get_data()
+
+@ddt
 class TestCase(unittest.TestCase):
-
-    def setUp(self) -> None:
-        pass
-    @classmethod
-    def setUpClass(cls) -> None:
-        # 1、获取测试数据。调用readExcel内部的getdata方法
-        cls.read = ReadExcel()
-        cls.data = cls.read.get_data()
-
-    #2、提取测试数据内的method方法
-    def test_run(self):
-        for i in range(len(self.data)):
-            url = self.data[i]['interfaceUrl']
-            value1 = eval(self.data[i]['value'])
-            print(value1)
-            expect = self.data[i]['expect']
-            id = self.data[i]['id']
-            method = self.data[i]['Method']
-            if method == 'get':
-                result = requests.get(url=url, params=value1)
-
-            elif method == 'post':
-                result = requests.post(url=url, data=value1)
-            real_code = result.json()['errorCode']
-            try:
-                self.assertEqual(real_code, expect)
-            except AssertionError as msg:
-                print('系统提示：', msg)
-                status = 'fail'
-            finally:
-                pass
-
-    def tearDown(self) -> None:
-        pass
-    @classmethod
-    def tearDownClass(cls) -> None:
-        pass
-
+#2、提取测试数据内的method方法
+    @data(*read_data)
+    @unpack
+    def test_run(self, id, interfaceUrl, name, Method, value, expect, real, status):
+        id = id
+        url = interfaceUrl
+        value = eval(value)
+        method = Method
+        expect = expect
+        if method == 'get':
+            result = requests.get(url=url, params=value)
+            print("result", result.json())
+        elif method == 'post':
+            result = requests.post(url=url, data=value)
+            print("result", result.json())
+        real_code = result.json()['errorCode']
+        try:
+            self.assertEqual(str(real_code),str(expect))
+            status = 'success'
+        except AssertionError as msg:
+            print('系统提示：', msg)
+            status = 'fail'
+            raise
+        finally:
+            pass
 if __name__ == '__main__':
     unittest.main

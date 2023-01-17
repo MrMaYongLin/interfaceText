@@ -57,7 +57,7 @@ class ReadExcel():
             # list1 = row_value
             #将字典存到总列表中
             list_all.append(value)
-        print(list_all)
+        #print(list_all)
         return list_all
 if __name__ == '__main__':
     read = ReadExcel()
