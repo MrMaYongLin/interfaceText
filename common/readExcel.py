@@ -24,7 +24,7 @@ class ReadExcel():
     def __init__(self):
         #确定文件的位置
         cur_path = os.path.dirname(os.path.dirname(__file__))
-        excel_dir = cur_path + '/testData/data.xlsx'
+        excel_dir = cur_path + '/testData/data.xls'
         #print(excel_dir)
         #打开文件
         readbook = xlrd.open_workbook(excel_dir)

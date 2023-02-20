@@ -19,39 +19,32 @@
     6、将结果断言的结果写入Excel
 """
 import unittest
-import requests
 from common.readExcel import ReadExcel
+from common.configHttp import ConfigHttp
 from ddt import ddt, data, unpack
+from common.writeExcel import WriteExcle
+
 # 1、获取测试数据。调用readExcel内部的getdata方法
 read = ReadExcel()
 read_data = read.get_data()
-
 @ddt
 class TestCase(unittest.TestCase):
 #2、提取测试数据内的method方法
     @data(*read_data)
     @unpack
     def test_run(self, id, interfaceUrl, name, Method, value, expect, real, status):
-        id = id
-        url = interfaceUrl
-        value = eval(value)
-        method = Method
-        expect = expect
-        if method == 'get':
-            result = requests.get(url=url, params=value)
-            print("result", result.json())
-        elif method == 'post':
-            result = requests.post(url=url, data=value)
-            print("result", result.json())
-        real_code = result.json()['errorCode']
+        configHttp = ConfigHttp(interfaceUrl, value, Method)
+        statusCode, realErrorCode = configHttp.run()
         try:
-            self.assertEqual(str(real_code),str(expect))
+            self.assertEqual(str(statusCode), '200')
+            self.assertEqual(str(realErrorCode), str(expect))
             status = 'success'
         except AssertionError as msg:
             print('系统提示：', msg)
             status = 'fail'
             raise
         finally:
-            pass
+            we = WriteExcle()
+            we.write_excel(id, 6, realErrorCode, status)
 if __name__ == '__main__':
-    unittest.main
+    unittest.main()
